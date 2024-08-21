@@ -23,6 +23,6 @@ public class FibonacciSeries {
             a = b;
             b = next;
         }
-        System.out.println(); // for a newline at the end
+        System.out.println(); 
     }
 }
