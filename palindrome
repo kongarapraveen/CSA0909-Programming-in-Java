@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class PalindromeChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine().replaceAll("\\s+", "").toLowerCase();
+        System.out.println(isPalindrome(input) ? "\"" + input + "\" is a palindrome." : "\"" + input + "\" is not a palindrome.");
+        scanner.close();
+    }
+
+    private static boolean isPalindrome(String str) {
+        return str.equals(new StringBuilder(str).reverse().toString());
+    }
+}
