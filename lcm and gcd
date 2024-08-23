@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class LCMGCDCalculator {
+
+    public static int gcd(int a, int b) {
+        if (b == 0) {
+            return a;
+        }
+        return gcd(b, a % b);
+    }
+
+    public static int lcm(int a, int b) {
+        return Math.abs(a * b) / gcd(a, b);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of integers: ");
+        int n = scanner.nextInt();
+
+        if (n < 2) {
+            System.out.println("At least two numbers are required.");
+            return;
+        }
+
+        System.out.print("Enter Number 1: ");
+        int num1 = scanner.nextInt();
+
+        int gcd = num1;
+        int lcm = num1;
+
+        for (int i = 1; i < n; i++) {
+            System.out.print("Enter Number " + (i + 1) + ": ");
+            int num = scanner.nextInt();
+            
+            gcd = gcd(gcd, num);
+            lcm = lcm(lcm, num);
+        }
+
+        System.out.println("LCM = " + lcm);
+        System.out.println("GCD = " + gcd);
+    }
+}
