@@ -1,0 +1,16 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class Decimal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the string: ");
+        String original = scanner.nextLine();
+        String reversed = new StringBuilder(original).reverse().toString();
+        System.out.println("Reversed string: " + reversed);
+        char[] charArray = reversed.toCharArray();
+        Arrays.sort(charArray);
+        String s1 = new String(charArray);
+        System.out.println("Sorted reversed string: " + s1);
+    }
+}
+reverse string arrange in alphabet order
