@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Java{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int lcount=0,ucount=0;
+        char c;
+        do{
+            System.out.println("enter any character:");
+            c=sc.next().charAt(0);
+            if(Character.isLowerCase(c)){
+                lcount++;
+            }
+            else if(Character.isUpperCase(c)){
+                ucount++;
+            }
+        } while(c!='*');
+        System.out.println(lcount);
+        System.out.println(ucount);
+    }
+}
