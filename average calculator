@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Java{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int pcount=0,ncount=0,psum=0,nsum=0,n;
+        do{
+            System.out.println("enter a number:");
+            n=sc.nextInt();
+            if(n>0){
+                psum=psum+n;
+                pcount++;
+            }
+            else if(n<0 && n!=-1){
+                nsum=nsum+n;
+                ncount++;
+            }
+        } while (n!=-1);
+        double pavg=psum/pcount;
+        double navg=nsum/ncount;
+        System.out.println(pavg);
+        System.out.println(navg);
+        
+    }
+}
