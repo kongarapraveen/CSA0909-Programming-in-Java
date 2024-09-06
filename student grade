@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Java{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter marks in python,c,maths,physics:");
+        int n1=sc.nextInt();
+        int n2=sc.nextInt();
+        int n3=sc.nextInt();
+        int n4=sc.nextInt();
+        int total=n1+n2+n3+n4;
+        double aggregate=total/4;
+        System.out.println(aggregate);
+        if(aggregate>=75){
+            System.out.println("grade is distinction");
+        }
+        else if(60>=aggregate && aggregate<75){
+            System.out.println("first division.");
+        }
+        else if(50>=aggregate && aggregate<60){
+            System.out.println("second division.");
+        }
+        else if(40>=aggregate && aggregate<50){
+            System.out.println("third divison.");
+        }
+        else{
+            System.out.println("fail");
+        }
+    }
+}
