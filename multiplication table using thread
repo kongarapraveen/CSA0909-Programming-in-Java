@@ -1,0 +1,20 @@
+class Table extends Thread{
+    private int n;
+    public Table(int n){
+        this.n=n;
+    }
+    public void run(){
+        for(int i=1;i<=10;i++){
+            System.out.println(n+"*"+i+"="+(n*i));
+        }
+    }
+}
+public class Main{
+    public static void main(String[] args) throws InterruptedException{
+        Table table5=new Table(5);
+        Table table10=new Table(10);
+        table5.start();
+        table5.join();
+        table10.start();
+    }
+}
