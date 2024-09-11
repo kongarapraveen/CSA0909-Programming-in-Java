@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Java {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n = sc.nextInt();
+        int count = 0;
+        int number = 2;
+        int nthPrime = -1;
+        while (count < n) {
+            if (isPrime(number)) {
+                count++;
+                if (count == n) {
+                    nthPrime = number;
+                }
+            }
+            number++;
+        }
+        System.out.println(n + "th prime number is: " + nthPrime);
+        int primesToPrint = n;
+        number = nthPrime + 1;
+        while (primesToPrint > 0) {
+            if (isPrime(number)) {
+                System.out.println(number);
+                primesToPrint--;
+            }
+            number++;
+        }
+        sc.close();
+    }
+    private static boolean isPrime(int num) {
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
