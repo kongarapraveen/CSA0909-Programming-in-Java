@@ -1,0 +1,18 @@
+import java.util.Calendar;
+import java.util.Scanner;
+public class DayOfWeekFinder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the day: ");
+        int day = scanner.nextInt();
+        System.out.print("Enter the month: ");
+        int month = scanner.nextInt();
+        System.out.print("Enter the year: ");
+        int year = scanner.nextInt();
+        Calendar x = Calendar.getInstance();
+        x.set(year, month - 1, day); 
+        int n = x.get(Calendar.DAY_OF_WEEK);
+        String[] s = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+        System.out.println("Day of the week: " + s[n - 1]);
+    }
+}
