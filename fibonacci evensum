@@ -1,0 +1,18 @@
+public class Java {
+    public static void main(String[] args) {
+        int n = 4;  
+        int a = 0, b = 1;
+        int sum = 0;
+        int index = 0;
+        while (index <= 2*n) {
+            if (index % 2 == 0) {
+                sum += a;
+            }
+            int c = a + b;
+            a = b;
+            b = c;
+            index++;
+        }
+        System.out.println(sum);
+    }
+}
