@@ -1,0 +1,13 @@
+public class Java{
+    public static void main(String[] args){
+       String s="04//11//1947";
+       String[] parts=s.split("/");
+       int year=Integer.parseInt(parts[2]);
+       if(year%400==0){
+           System.out.println("leap year.");
+       }
+       else{
+           System.out.println("not leap year.");
+       }
+    }
+}
