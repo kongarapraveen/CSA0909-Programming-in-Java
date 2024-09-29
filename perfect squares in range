@@ -1,0 +1,13 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Java{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        for(int i=1;i<=40;i++){
+            double n1=Math.sqrt(i);
+            if(n1==(int)n1){
+                System.out.println(i);
+            }
+        }
+    }
+}
